@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background-image: url(../img/pexels-pixabay-301673.jpg);
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-weight: 400;
+  font-family: "Lobster", cursive;
+}
+
+.titulos {
+  text-align: center;
+  padding: 10px;
+  color: rgb(3, 35, 54);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  background: #293241;
+  height: 80px;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.nav__container {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: 1.5em;
+  font-weight: 900px;
+}
+
+.nav__menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3em;
+}
+
+.nav__item {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav__item::after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 90%;
+  margin-top: 3px;
+  height: 3px;
+  clip-path: var(--clippy);
+  transition: clip-path 0.5s;
+}
+
+.nav__item:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav__input:checked + .nav__menu {
+  background: tomato;
+}
+
+.nav__label,
+.nav__input {
+  display: none;
+}
+
+/* ---------cuerpo----------------- */
+
+.impresionTarjeta,
+.impresionTarjeta2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+/* --------------tarjetas------------------------------ */
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.card .back {
+  transform: perspective(600px), rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.card .back .link h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+}
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+/* ------------------tabla------------------ */
+
+.div-tabla {
+  font-family: "Montserrat", sans-serif;
+  border-color: transparent !important;
+}
+table {
+  width: 90% !important;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 7rem;
+  margin-left: 5%;
+  border-color: transparent !important;
+}
+tr {
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+}
+.encabezados {
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+}
+thead {
+  color: #000;
+  font-weight: 400;
+  font-size: 1em;
+  border: none;
+}
+
+tbody {
+  font-weight: 700;
+  text-align: start;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.footer {
+  margin-top: 8.5rem;
+}
+
+th {
+  border-bottom: transparent !important ;
+}
+/*------------------ formulario---------------------- */
+
+.form {
+  background-color: rgba(255, 255, 255, 0.445);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 3.5em 1.5em;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+
+.form__container {
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+}
+
+.form__title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 0.4em;
+}
+
+.form__input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  outline: none;
+  border: none;
+  border: 1px solid #bbb0b0;
+  border-radius: 0.2em;
+}
+
+.form__input--message {
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: 0.5em;
+}
+
+.form__cta {
+  font-family: "Montserrat", sans-serif;
+  background-color: #089fe0;
+  color: #fff;
+  border: none;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.7em 0;
+  border-radius: 0.2em;
+  cursor: pointer;
+  font-weight: 400;
+}
+input {
+  margin-left: 1em;
+}
+/*-------------- footer------------- */
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: larger;
+  padding: 1em;
+  color: #fff;
+  background: rgba(19, 17, 17, 0.4);
+}
+/*----------------------- responsive---------------------- */
+
+@media (max-width: 850px) {
+  .nav__label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #f08080;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+    z-index: 10;
+  }
+  .nav__input:checked + .nav__menu {
+    clip-path: circle(100% at center);
+  }
+}

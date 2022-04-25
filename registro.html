@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Pasados</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__container">
+
+                <h1 class="nav__logo">Amazing Events</h1>
+
+                <label for="menu" class="nav__label">
+                    <img src="" class="nav__img fas fa-bars">
+                </label>
+                <input type="checkbox" id="menu" class="nav__input">
+
+                <div class="nav__menu">
+                    <a href="./index.html" class="nav__item">Início</a>
+                    <a href="./proximos.html" class="nav__item">Próximos Eventos</a>
+                    <a href="./pasados.html" class="nav__item">Eventos Pasados</a>
+                    <a href="#" class="nav__item">Registro</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+   <form class="form">
+
+    <div class="form__container">
+        <h2 class="form__title ">Contacto</h2>
+        <input type="text" class="form__input" placeholder="Nombre" name="name">
+        <input type="email" class="form__input" placeholder="Email" name="_replyto">
+        <input type="password" class="form__input" placeholder="Contraseña">
+        <textarea class="form__input form__input--message" placeholder="Mensaje" name="message"></textarea>
+        <div class="form__input">
+            <label for="tipo">Tipo de Usuario</label> <span class="text-danger" id="errorTipo"></span>
+            <select id="tipo" class="form__input">
+      <option value="-1" selected>Seleccione...</option>
+      <option value="1">Estudiante</option>
+      <option value="2">Docente</option>
+      <option value="3">Otro</option>
+    </select>
+        </div>
+        <div class="form__imput">
+            <div class="form__imput">
+                <input class="form__imput" type="checkbox" id="acepto">
+                <label class="form__imput" for="acepto">
+          Acepto los términos y condiciones <span class="form__imput"></span>
+        </label>
+            </div>
+        </div>
+        <input type="submit" value="Enviar" class="form__cta">
+
+    </div>
+
+   </form>
+
+    <footer>
+        Todos los derechos reservados &copy; 2022
+    </footer>
+    <script src="https://kit.fontawesome.com/9b528aef02.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
+
+    
